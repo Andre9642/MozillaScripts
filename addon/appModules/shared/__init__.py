@@ -5,9 +5,11 @@
 
 from datetime import datetime, timedelta
 from threading import Timer
+from tones import beep
 import speech
 import controlTypes
 import api
+import ui
 import addonHandler
 
 addonHandler.initTranslation()
@@ -32,13 +34,13 @@ def focusAlertPopup(alertPopup, SETFOCUS = True):
 
 def elapsedFromTimestamp(timestamp):
 	delta = datetime.now()-timestamp
-	d = -delta.days
+	d = delta.days
+	if d == 1:
+		return _("Yesterday")
+	if d > 1:
+		return _("%d days ago") % d
 	h, r = divmod(delta.seconds, 3600)
 	m, s = divmod(r, 60)
-	if d == 1:
-		return "Yesterday"
-	if d > 1:
-		return "%d days ago" % d
 	if h == 1:
 		return _("About an hour ago")
 	elif h > 1:
@@ -59,4 +61,19 @@ def getAlertText(alertPopup):
 		if not obj.isFocusable and objText not in alertText:
 			alertText = "%s %s" % (alertText, objText)
 	return alertText
-	
+
+def showDebugMessage(obj):
+	clsList = []
+	obj.findOverlayClasses(clsList)
+	debug = "Please copy this report and paste it in https://github.com/javidominguez/MozillaScripts/issues\n\
+	Unexpected object in event_alert\n\
+	appModule: %s\nRole: %s\nName: %s\nDescription: %s\n IA2Attributes:%s%s%s\nClasses: %s"\
+	% (obj.appModule.appName,
+	controlTypes.roleLabels[obj.role],
+	obj.name, obj.description.replace("\n", "\\n"),
+	" id:%s" % obj.IA2Attributes["id"] if "id" in obj.IA2Attributes.keys() else "",
+	" tag:%s" % obj.IA2Attributes["tag"] if "tag" in obj.IA2Attributes.keys() else "",
+	" class:%s" % obj.IA2Attributes["class"] if "class" in obj.IA2Attributes.keys() else "",
+	" ".join([str(c) for c in clsList]))
+	beep(200, 150)
+	ui.browseableMessage(debug, "MozillaScripts appModule debug")

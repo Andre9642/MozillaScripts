@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-11-26 20:58+0100\n"
-"PO-Revision-Date: 2017-11-26 20:59+0100\n"
+"POT-Creation-Date: 2017-12-07 13:02+0100\n"
+"PO-Revision-Date: 2017-12-07 13:03+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: es\n"
@@ -18,58 +18,58 @@ msgstr ""
 "X-Generator: Poedit 1.8.8\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: source:27
+#: sources:28
 msgid "mozilla Firefox"
 msgstr "Mozilla Firefox"
 
-#: source:40
+#: sources:42
 msgid "Couldn't capture the text of this notification"
 msgstr "No se pudo capturar el texto de esta notificación"
 
-#: source:50 source:74 source:91 source:113 source:155
+#: sources:54 sources:78 sources:95 sources:136
 msgid "Not available here"
 msgstr "No disponible aquí"
 
-#: source:61
+#: sources:65
 #, python-format
 msgid "Status bar: %s"
 msgstr "Barra de estado: %s "
 
-#: source:63 source:69
+#: sources:67 sources:73
 msgid "Status bar not found"
 msgstr "No se encontró la barra de estado"
 
-#: source:67 source:84
+#: sources:71 sources:88
 msgid "Copied to clipboard"
 msgstr "Copiado al portapapeles"
 
-#: source:70
+#: sources:74
 msgid "Reads the status bar. If pressed twice quickly, copies it to clipboard."
 msgstr ""
 "Lee la barra de estado. Si se pulsa dos veces rápidamente, la copia al "
 "portapapeles. "
 
-#: source:81
+#: sources:85
 #, python-format
 msgid "Page address is: %s (%s)"
 msgstr "La dirección de la página es: %s (%s) "
 
-#: source:86
+#: sources:90
 msgid "Address not found"
 msgstr "Dirección no encontrada"
 
-#: source:87
+#: sources:91
 msgid ""
 "Reads the page address. If pressed twice quickly, copies it to clipboard."
 msgstr ""
 "Lee la dirección de la página. Si se pulsa dos veces rápidamente, la copia "
 "al portapapeles. "
 
-#: source:107
+#: sources:111
 msgid "Tool bar not found"
 msgstr "No se encuentra la barra de herramientas"
 
-#: source:108
+#: sources:112
 msgid ""
 "Shows a list of opened tabs. If pressed twice quickly, shows buttons of tool "
 "bar."
@@ -77,47 +77,20 @@ msgstr ""
 "Muestra una lista de pestañas abiertas. Si se pulsa dos veces rápidamente, "
 "muestra los botones de la barra de herramientas. "
 
-#: source:134
-msgid "About an hour ago"
-msgstr "Hace una hora"
-
-#: source:136
-#, python-format
-msgid "About %d hours ago"
-msgstr "Hace unas %d horas"
-
-#: source:138
-msgid "About a minute ago"
-msgstr "Hace un minuto"
-
-#: source:140
-#, python-format
-msgid "About %d minutes ago"
-msgstr "Hace unos %d minutos"
-
-#: source:142
-msgid "a second ago"
-msgstr "Hace un segundo"
-
-#: source:144
-#, python-format
-msgid "%d seconds ago"
-msgstr "Hace %d segundos"
-
-#: source:146
+#: sources:127 sources:443
 msgid "Notification History"
 msgstr "Historial de notificaciones"
 
-#: source:148
+#: sources:129 sources:445
 #, python-format
 msgid "Last alert, %s: %s"
 msgstr "Ultima alerta %s %s"
 
-#: source:150
+#: sources:131 sources:447
 msgid "There is no notification"
 msgstr "No hay ninguna notificación"
 
-#: source:151
+#: sources:132 sources:448
 msgid ""
 "Reads the last notification and it takes the system focus to it if it is "
 "possible. By pressing two times quickly shows the history of notifications."
@@ -125,167 +98,203 @@ msgstr ""
 "Lee la última notificación y lleva el foco del sistema a ella si es posible. "
 "Pulsando dos veces rápidamente muestra el historial de notificaciones."
 
-#: source:174
+#: sources:155
 msgid "Brings the focus to the document"
 msgstr "Lleva el foco al documento"
 
-#: source:198
+#: sources:167
 msgid "Opened tabs"
 msgstr "Pestañas abiertas"
 
-#: source:205
+#: sources:174
 msgid "Tool Bar Buttons"
 msgstr "Botones de la barra de herramientas"
 
-#: source:258
+#: sources:227
 msgid "&Go"
 msgstr "&Ir"
 
-#: source:262
+#: sources:231
 msgid "&Options"
 msgstr "&Opciones"
 
-#: source:265 source:688
+#: sources:234 sources:681
 msgid "Close"
 msgstr "Cerrar"
 
-#: source:349 source:617
+#: sources:310 sources:610
 msgid "mozilla Thunderbird"
 msgstr "Mozilla Thunderbird"
 
-#: source:359
+#: sources:322
 msgid "(Press down arrow to display more options)"
 msgstr "Pulsa flecha abajo para mostrar más opciones"
 
-#: source:394 source:405 source:471
+#: sources:368 sources:379 sources:463
 msgid "Not found"
 msgstr "No encontrado"
 
-#: source:396 source:407 source:479
+#: sources:370 sources:381 sources:471
 msgid "you are not in a message window"
 msgstr "No estás en una ventana de mensaje "
 
-#: source:397
+#: sources:371
 msgid "Reads the subject of the message."
 msgstr "Lee el asunto del mensaje. "
 
-#: source:408
+#: sources:382
 msgid "Reads date of the message."
 msgstr "Lee la fecha del mensaje. "
 
-#: source:417
+#: sources:391
 msgid "You are not in a list of messages"
 msgstr "No está en una lista de mensajes"
 
-#: source:420
+#: sources:394
 msgid "Column headers not found"
 msgstr "No se encuentran encabezados de columna"
 
-#: source:430
+#: sources:404
 msgid "Allows you to change the order of the columns in the messages list"
 msgstr "Permite cambiar el orden de las columnas en la lista de mensajes"
 
-#: source:438
+#: sources:412
 msgid "There are No attachments"
 msgstr "No hay adjuntos"
 
-#: source:449
+#: sources:423
 msgid "Brings the focus to the list of attachments, if any."
 msgstr "Lleva el foco a la lista de adjuntos si los hay."
 
-#: source:456
+#: sources:430
 msgid "Brings the focus to the text of the open message."
 msgstr "Lleva el foco al texto del mensaje abierto."
 
-#: source:522 source:533 source:556 source:567
+#: sources:515 sources:526 sources:549 sources:560
 msgid "Search in "
 msgstr "Buscar en "
 
-#: source:537
+#: sources:530
 msgid "Leaving search box"
 msgstr "Dejando la caja de búsqueda "
 
-#: source:584
+#: sources:577
 msgid "uncheck"
 msgstr "Desmarcar"
 
-#: source:586
+#: sources:579
 msgid "check"
 msgstr "Marcar"
 
-#: source:595
+#: sources:588
 msgid "checked"
 msgstr "Marcado"
 
-#: source:597
+#: sources:590
 msgid "not checked"
 msgstr "No marcado"
 
-#: source:625
+#: sources:618
 msgid "There are not more columns"
 msgstr "No hay más columnas"
 
-#: source:629
+#: sources:622
 msgid "empty"
 msgstr "Vacía"
 
-#: source:641
+#: sources:634
 msgid "Expand the conversation to display messages"
 msgstr "Expande la conversación para ver los mensajes"
 
-#: source:643
+#: sources:636
 msgid "Preview pane is not active or message has not been loaded yet"
 msgstr ""
 "El panel de vista previa no está activo o el mensaje no se ha cargado aún"
 
-#: source:644
+#: sources:637
 msgid "In message list, reads the selected message without leaving the list."
 msgstr ""
 "En la lista de mensajes, lee el mensaje seleccionado sin salir de la lista."
 
-#: source:673
+#: sources:666
 msgid "Manage columns"
 msgstr "Organizar columnas"
 
-#: source:680
+#: sources:673
 msgid "&up"
 msgstr "&Subir"
 
-#: source:683
+#: sources:676
 msgid "&down"
 msgstr "&Bajar"
 
-#: source:686
+#: sources:679
 msgid "&options"
 msgstr "&Opciones"
 
-#: source:711
+#: sources:704
 #, python-format
 msgid "Can't move %s, it is already the first column."
 msgstr "No se puede mover %s, ya es la primera columna."
 
-#: source:718
+#: sources:711
 #, python-format
 msgid "%s before %s"
 msgstr "%s antes de %s"
 
-#: source:725
+#: sources:718
 #, python-format
 msgid "Can't move %s, it is already the last column."
 msgstr "No se puede mover %s, ya es la última columna"
 
-#: source:732
+#: sources:725
 #, python-format
 msgid "%s after %s"
 msgstr "%s después de  %s"
 
-#: source:747
+#: sources:740
 #, python-format
 msgid ""
 "Folder has changed, return to %s to manage columns or restart this dialog"
 msgstr ""
 "Ha cambiado la carpeta, regrese a %s para gestionar las columnas o reinicie "
 "este cuadro de diálogo"
+
+#: sources:801
+msgid "Yesterday"
+msgstr "Ayer"
+
+#: sources:803
+#, python-format
+msgid "%d days ago"
+msgstr "Hace %d días"
+
+#: sources:807
+msgid "About an hour ago"
+msgstr "Hace una hora"
+
+#: sources:809
+#, python-format
+msgid "About %d hours ago"
+msgstr "Hace unas %d horas"
+
+#: sources:811
+msgid "About a minute ago"
+msgstr "Hace un minuto"
+
+#: sources:813
+#, python-format
+msgid "About %d minutes ago"
+msgstr "Hace unos %d minutos"
+
+#: sources:815
+msgid "a second ago"
+msgstr "Hace un segundo"
+
+#: sources:817
+#, python-format
+msgid "%d seconds ago"
+msgstr "Hace %d segundos"
 
 #~ msgid "If there is any notification opens"
 #~ msgstr "Abre la notificación si la hay"

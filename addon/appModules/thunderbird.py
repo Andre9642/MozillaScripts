@@ -54,11 +54,14 @@ class AppModule(thunderbird.AppModule):
 				pass
 
 	def event_alert(self, obj, nextHandler):
-		alertText = obj.name if obj.name else obj.description if obj.description else obj.displayText if obj.displayText else ""
-		if shared.focusAlertPopup(obj,
-		SETFOCUS = False if controlTypes.STATE_EDITABLE in api.getFocusObject().states else True):
-			return
-		self.notificationHistory.append((datetime.now(), alertText.replace("\n", "\t")))
+		if obj.role == controlTypes.ROLE_ALERT:
+			alertText = obj.name if obj.name else obj.description if obj.description else obj.displayText if obj.displayText else ""
+			if shared.focusAlertPopup(obj,
+			SETFOCUS = False if controlTypes.STATE_EDITABLE in api.getFocusObject().states else True):
+				return
+			self.notificationHistory.append((datetime.now(), alertText.replace("\n", "\t")))
+		else:
+			shared.showDebugMessage(obj)
 		nextHandler()
 
 	def script_readAddressField(self, gesture):

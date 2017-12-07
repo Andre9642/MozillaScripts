@@ -28,13 +28,25 @@ class AppModule(firefox.AppModule):
 	scriptCategory = _("mozilla Firefox")
 
 	def event_alert(self, obj, nextHandler):
-		alertText = shared.getAlertText(obj)
-		alertText = _("Couldn't capture the text of this notification") if not alertText else alertText
-		if self.inMainWindow():
-			if shared.focusAlertPopup(obj):
-				Timer(0.75, nextHandler)
+		try:
+			if obj.IA2Attributes["id"] == "customizationui-widget-panel":
+				# Add-on configuration panel
+				speech.cancelSpeech()
+				api.setFocusObject(obj.simpleFirstChild)
+				nextHandler()
 				return
-		self.notificationHistory.append((datetime.now(), alertText.replace("\n", "\t")))
+		except (KeyError, AttributeError):
+			pass
+		if obj.role == controlTypes.ROLE_ALERT:
+			alertText = "%s, %s" % (controlTypes.roleLabels[obj.role], shared.getAlertText(obj))
+			alertText = _("Couldn't capture the text of this notification") if not alertText else alertText
+			if self.inMainWindow():
+				if shared.focusAlertPopup(obj):
+					Timer(0.75, nextHandler)
+					return
+			self.notificationHistory.append((datetime.now(), alertText.replace("\n", "\t")))
+		else:
+			shared.showDebugMessage(obj)
 		nextHandler()
 
 	def script_status(self, gesture):
